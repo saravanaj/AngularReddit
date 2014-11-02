@@ -1,0 +1,19 @@
+node_modules
+dist
+.tmp
+.sass-cache
+app/libs
+bin/
+obj/
+*.user
+*.userprefs
+*.suo
+*.pidb
+_ReSharper*/
+TestResults/
+*.mdf
+*.psess
+*.vsp
+
+# StyleCop files
+StyleCop.Cache
