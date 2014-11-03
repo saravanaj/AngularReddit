@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{C79B63B6-5D21-4C70-8757-0D6FF170FD53}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>AngularReddit</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9966</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1162/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".bowerrc" />
+    <Content Include=".editorconfig" />
+    <Content Include=".jshintrc" />
+    <Content Include=".travis.yml" />
+    <Content Include="app\404.html" />
+    <Content Include="app\favicon.ico" />
+    <Content Include="app\images\yeoman.png" />
+    <Content Include="app\index.html" />
+    <Content Include="app\libs\angular-animate\angular-animate.js" />
+    <Content Include="app\libs\angular-animate\angular-animate.min.js" />
+    <Content Include="app\libs\angular-cookies\angular-cookies.js" />
+    <Content Include="app\libs\angular-cookies\angular-cookies.min.js" />
+    <Content Include="app\libs\angular-mocks\angular-mocks.js" />
+    <Content Include="app\libs\angular-resource\angular-resource.js" />
+    <Content Include="app\libs\angular-resource\angular-resource.min.js" />
+    <Content Include="app\libs\angular-route\angular-route.js" />
+    <Content Include="app\libs\angular-route\angular-route.min.js" />
+    <Content Include="app\libs\angular-sanitize\angular-sanitize.js" />
+    <Content Include="app\libs\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="app\libs\angular-scenario\angular-scenario.js" />
+    <Content Include="app\libs\angular-scenario\jstd-scenario-adapter-config.js" />
+    <Content Include="app\libs\angular-scenario\jstd-scenario-adapter.js" />
+    <Content Include="app\libs\angular-touch\angular-touch.js" />
+    <Content Include="app\libs\angular-touch\angular-touch.min.js" />
+    <Content Include="app\libs\angular\angular-csp.css" />
+    <Content Include="app\libs\angular\angular.js" />
+    <Content Include="app\libs\angular\angular.min.js" />
+    <Content Include="app\libs\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="app\libs\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="app\libs\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="app\libs\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="app\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\libs\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="app\libs\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="app\libs\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\libs\bootstrap\Gruntfile.js" />
+    <Content Include="app\libs\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="app\libs\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="app\libs\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="app\libs\bootstrap\js\affix.js" />
+    <Content Include="app\libs\bootstrap\js\alert.js" />
+    <Content Include="app\libs\bootstrap\js\button.js" />
+    <Content Include="app\libs\bootstrap\js\carousel.js" />
+    <Content Include="app\libs\bootstrap\js\collapse.js" />
+    <Content Include="app\libs\bootstrap\js\dropdown.js" />
+    <Content Include="app\libs\bootstrap\js\modal.js" />
+    <Content Include="app\libs\bootstrap\js\popover.js" />
+    <Content Include="app\libs\bootstrap\js\scrollspy.js" />
+    <Content Include="app\libs\bootstrap\js\tab.js" />
+    <Content Include="app\libs\bootstrap\js\tooltip.js" />
+    <Content Include="app\libs\bootstrap\js\transition.js" />
+    <Content Include="app\libs\es5-shim\es5-sham.js" />
+    <Content Include="app\libs\es5-shim\es5-sham.min.js" />
+    <Content Include="app\libs\es5-shim\es5-shim.js" />
+    <Content Include="app\libs\es5-shim\es5-shim.min.js" />
+    <Content Include="app\libs\jquery\dist\jquery.js" />
+    <Content Include="app\libs\jquery\dist\jquery.min.js" />
+    <Content Include="app\libs\jquery\MIT-LICENSE.txt" />
+    <Content Include="app\libs\jquery\src\ajax.js" />
+    <Content Include="app\libs\jquery\src\ajax\jsonp.js" />
+    <Content Include="app\libs\jquery\src\ajax\load.js" />
+    <Content Include="app\libs\jquery\src\ajax\parseJSON.js" />
+    <Content Include="app\libs\jquery\src\ajax\parseXML.js" />
+    <Content Include="app\libs\jquery\src\ajax\script.js" />
+    <Content Include="app\libs\jquery\src\ajax\var\nonce.js" />
+    <Content Include="app\libs\jquery\src\ajax\var\rquery.js" />
+    <Content Include="app\libs\jquery\src\ajax\xhr.js" />
+    <Content Include="app\libs\jquery\src\attributes.js" />
+    <Content Include="app\libs\jquery\src\attributes\attr.js" />
+    <Content Include="app\libs\jquery\src\attributes\classes.js" />
+    <Content Include="app\libs\jquery\src\attributes\prop.js" />
+    <Content Include="app\libs\jquery\src\attributes\support.js" />
+    <Content Include="app\libs\jquery\src\attributes\val.js" />
+    <Content Include="app\libs\jquery\src\callbacks.js" />
+    <Content Include="app\libs\jquery\src\core.js" />
+    <Content Include="app\libs\jquery\src\core\access.js" />
+    <Content Include="app\libs\jquery\src\core\init.js" />
+    <Content Include="app\libs\jquery\src\core\parseHTML.js" />
+    <Content Include="app\libs\jquery\src\core\ready.js" />
+    <Content Include="app\libs\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="app\libs\jquery\src\css.js" />
+    <Content Include="app\libs\jquery\src\css\addGetHookIf.js" />
+    <Content Include="app\libs\jquery\src\css\curCSS.js" />
+    <Content Include="app\libs\jquery\src\css\defaultDisplay.js" />
+    <Content Include="app\libs\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="app\libs\jquery\src\css\support.js" />
+    <Content Include="app\libs\jquery\src\css\swap.js" />
+    <Content Include="app\libs\jquery\src\css\var\cssExpand.js" />
+    <Content Include="app\libs\jquery\src\css\var\getStyles.js" />
+    <Content Include="app\libs\jquery\src\css\var\isHidden.js" />
+    <Content Include="app\libs\jquery\src\css\var\rmargin.js" />
+    <Content Include="app\libs\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="app\libs\jquery\src\data.js" />
+    <Content Include="app\libs\jquery\src\data\accepts.js" />
+    <Content Include="app\libs\jquery\src\data\Data.js" />
+    <Content Include="app\libs\jquery\src\data\var\data_priv.js" />
+    <Content Include="app\libs\jquery\src\data\var\data_user.js" />
+    <Content Include="app\libs\jquery\src\deferred.js" />
+    <Content Include="app\libs\jquery\src\deprecated.js" />
+    <Content Include="app\libs\jquery\src\dimensions.js" />
+    <Content Include="app\libs\jquery\src\effects.js" />
+    <Content Include="app\libs\jquery\src\effects\animatedSelector.js" />
+    <Content Include="app\libs\jquery\src\effects\Tween.js" />
+    <Content Include="app\libs\jquery\src\event.js" />
+    <Content Include="app\libs\jquery\src\event\alias.js" />
+    <Content Include="app\libs\jquery\src\event\support.js" />
+    <Content Include="app\libs\jquery\src\exports\amd.js" />
+    <Content Include="app\libs\jquery\src\exports\global.js" />
+    <Content Include="app\libs\jquery\src\intro.js" />
+    <Content Include="app\libs\jquery\src\jquery.js" />
+    <Content Include="app\libs\jquery\src\manipulation.js" />
+    <Content Include="app\libs\jquery\src\manipulation\support.js" />
+    <Content Include="app\libs\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="app\libs\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="app\libs\jquery\src\offset.js" />
+    <Content Include="app\libs\jquery\src\outro.js" />
+    <Content Include="app\libs\jquery\src\queue.js" />
+    <Content Include="app\libs\jquery\src\queue\delay.js" />
+    <Content Include="app\libs\jquery\src\selector-native.js" />
+    <Content Include="app\libs\jquery\src\selector-sizzle.js" />
+    <Content Include="app\libs\jquery\src\selector.js" />
+    <Content Include="app\libs\jquery\src\serialize.js" />
+    <Content Include="app\libs\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="app\libs\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="app\libs\jquery\src\traversing.js" />
+    <Content Include="app\libs\jquery\src\traversing\findFilter.js" />
+    <Content Include="app\libs\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="app\libs\jquery\src\var\arr.js" />
+    <Content Include="app\libs\jquery\src\var\class2type.js" />
+    <Content Include="app\libs\jquery\src\var\concat.js" />
+    <Content Include="app\libs\jquery\src\var\hasOwn.js" />
+    <Content Include="app\libs\jquery\src\var\indexOf.js" />
+    <Content Include="app\libs\jquery\src\var\pnum.js" />
+    <Content Include="app\libs\jquery\src\var\push.js" />
+    <Content Include="app\libs\jquery\src\var\rnotwhite.js" />
+    <Content Include="app\libs\jquery\src\var\slice.js" />
+    <Content Include="app\libs\jquery\src\var\strundefined.js" />
+    <Content Include="app\libs\jquery\src\var\support.js" />
+    <Content Include="app\libs\jquery\src\var\toString.js" />
+    <Content Include="app\libs\jquery\src\wrap.js" />
+    <Content Include="app\libs\json3\lib\json3.js" />
+    <Content Include="app\libs\json3\lib\json3.min.js" />
+    <Content Include="app\scripts\app.js" />
+    <Content Include="app\scripts\controllers\posts.js" />
+    <Content Include="app\scripts\services\reddit.js" />
+    <Content Include="test\karma.conf.js" />
+    <Content Include="test\spec\controllers\posts.js" />
+    <None Include="app\scripts\_references.js" />
+    <Content Include="app\styles\main.css" />
+    <Content Include="app\views\posts.html" />
+    <Content Include="bower.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="Web.config" />
+    <Content Include="app\.buildignore" />
+    <Content Include="app\libs\angular-animate\.bower.json" />
+    <Content Include="app\libs\angular-animate\angular-animate.min.js.map" />
+    <Content Include="app\libs\angular-animate\bower.json" />
+    <Content Include="app\libs\angular-animate\package.json" />
+    <Content Include="app\libs\angular-animate\README.md" />
+    <Content Include="app\libs\angular-cookies\.bower.json" />
+    <Content Include="app\libs\angular-cookies\angular-cookies.min.js.map" />
+    <Content Include="app\libs\angular-cookies\bower.json" />
+    <Content Include="app\libs\angular-cookies\package.json" />
+    <Content Include="app\libs\angular-cookies\README.md" />
+    <Content Include="app\libs\angular-mocks\.bower.json" />
+    <Content Include="app\libs\angular-mocks\bower.json" />
+    <Content Include="app\libs\angular-mocks\package.json" />
+    <Content Include="app\libs\angular-mocks\README.md" />
+    <Content Include="app\libs\angular-resource\.bower.json" />
+    <Content Include="app\libs\angular-resource\angular-resource.min.js.map" />
+    <Content Include="app\libs\angular-resource\bower.json" />
+    <Content Include="app\libs\angular-resource\README.md" />
+    <Content Include="app\libs\angular-route\.bower.json" />
+    <Content Include="app\libs\angular-route\angular-route.min.js.map" />
+    <Content Include="app\libs\angular-route\bower.json" />
+    <Content Include="app\libs\angular-route\README.md" />
+    <Content Include="app\libs\angular-sanitize\.bower.json" />
+    <Content Include="app\libs\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="app\libs\angular-sanitize\bower.json" />
+    <Content Include="app\libs\angular-sanitize\README.md" />
+    <Content Include="app\libs\angular-scenario\.bower.json" />
+    <Content Include="app\libs\angular-scenario\bower.json" />
+    <Content Include="app\libs\angular-scenario\README.md" />
+    <Content Include="app\libs\angular-touch\.bower.json" />
+    <Content Include="app\libs\angular-touch\angular-touch.min.js.map" />
+    <Content Include="app\libs\angular-touch\bower.json" />
+    <Content Include="app\libs\angular-touch\package.json" />
+    <Content Include="app\libs\angular-touch\README.md" />
+    <Content Include="app\libs\angular\.bower.json" />
+    <Content Include="app\libs\angular\angular.min.js.gzip" />
+    <Content Include="app\libs\angular\angular.min.js.map" />
+    <Content Include="app\libs\angular\bower.json" />
+    <Content Include="app\libs\angular\package.json" />
+    <Content Include="app\libs\angular\README.md" />
+    <Content Include="app\libs\bootstrap\.bower.json" />
+    <Content Include="app\libs\bootstrap\bower.json" />
+    <Content Include="app\libs\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="app\libs\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="app\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\libs\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\libs\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\libs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\libs\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="app\libs\bootstrap\less\alerts.less" />
+    <Content Include="app\libs\bootstrap\less\badges.less" />
+    <Content Include="app\libs\bootstrap\less\bootstrap.less" />
+    <Content Include="app\libs\bootstrap\less\breadcrumbs.less" />
+    <Content Include="app\libs\bootstrap\less\button-groups.less" />
+    <Content Include="app\libs\bootstrap\less\buttons.less" />
+    <Content Include="app\libs\bootstrap\less\carousel.less" />
+    <Content Include="app\libs\bootstrap\less\close.less" />
+    <Content Include="app\libs\bootstrap\less\code.less" />
+    <Content Include="app\libs\bootstrap\less\component-animations.less" />
+    <Content Include="app\libs\bootstrap\less\dropdowns.less" />
+    <Content Include="app\libs\bootstrap\less\forms.less" />
+    <Content Include="app\libs\bootstrap\less\glyphicons.less" />
+    <Content Include="app\libs\bootstrap\less\grid.less" />
+    <Content Include="app\libs\bootstrap\less\input-groups.less" />
+    <Content Include="app\libs\bootstrap\less\jumbotron.less" />
+    <Content Include="app\libs\bootstrap\less\labels.less" />
+    <Content Include="app\libs\bootstrap\less\list-group.less" />
+    <Content Include="app\libs\bootstrap\less\media.less" />
+    <Content Include="app\libs\bootstrap\less\mixins.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\alerts.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\buttons.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\center-block.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\forms.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\gradients.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\grid.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\image.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\labels.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\list-group.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\opacity.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\pagination.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\panels.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\resize.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\size.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\table-row.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="app\libs\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="app\libs\bootstrap\less\modals.less" />
+    <Content Include="app\libs\bootstrap\less\navbar.less" />
+    <Content Include="app\libs\bootstrap\less\navs.less" />
+    <Content Include="app\libs\bootstrap\less\normalize.less" />
+    <Content Include="app\libs\bootstrap\less\pager.less" />
+    <Content Include="app\libs\bootstrap\less\pagination.less" />
+    <Content Include="app\libs\bootstrap\less\panels.less" />
+    <Content Include="app\libs\bootstrap\less\popovers.less" />
+    <Content Include="app\libs\bootstrap\less\print.less" />
+    <Content Include="app\libs\bootstrap\less\progress-bars.less" />
+    <Content Include="app\libs\bootstrap\less\responsive-embed.less" />
+    <Content Include="app\libs\bootstrap\less\responsive-utilities.less" />
+    <Content Include="app\libs\bootstrap\less\scaffolding.less" />
+    <Content Include="app\libs\bootstrap\less\tables.less" />
+    <Content Include="app\libs\bootstrap\less\theme.less" />
+    <Content Include="app\libs\bootstrap\less\thumbnails.less" />
+    <Content Include="app\libs\bootstrap\less\tooltip.less" />
+    <Content Include="app\libs\bootstrap\less\type.less" />
+    <Content Include="app\libs\bootstrap\less\utilities.less" />
+    <Content Include="app\libs\bootstrap\less\variables.less" />
+    <Content Include="app\libs\bootstrap\less\wells.less" />
+    <Content Include="app\libs\bootstrap\LICENSE" />
+    <Content Include="app\libs\bootstrap\package.json" />
+    <Content Include="app\libs\bootstrap\README.md" />
+    <Content Include="app\libs\es5-shim\.bower.json" />
+    <Content Include="app\libs\es5-shim\bower.json" />
+    <Content Include="app\libs\es5-shim\CHANGES" />
+    <Content Include="app\libs\es5-shim\component.json" />
+    <Content Include="app\libs\es5-shim\CONTRIBUTORS.md" />
+    <Content Include="app\libs\es5-shim\es5-sham.map" />
+    <Content Include="app\libs\es5-shim\es5-shim.map" />
+    <Content Include="app\libs\es5-shim\LICENSE" />
+    <Content Include="app\libs\es5-shim\package.json" />
+    <Content Include="app\libs\es5-shim\README.md" />
+    <Content Include="app\libs\es5-shim\shims.json" />
+    <Content Include="app\libs\jquery\.bower.json" />
+    <Content Include="app\libs\jquery\bower.json" />
+    <Content Include="app\libs\jquery\dist\jquery.min.map" />
+    <Content Include="app\libs\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="app\libs\json3\.bower.json" />
+    <Content Include="app\libs\json3\bower.json" />
+    <Content Include="app\libs\json3\CHANGELOG.md" />
+    <Content Include="app\libs\json3\CONTRIBUTING.md" />
+    <Content Include="app\libs\json3\LICENSE" />
+    <Content Include="app\libs\json3\README.md" />
+    <Content Include="test\.jshintrc" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="Gruntfile.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
